@@ -1,1 +1,139 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #111;
+}
 
+#game-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#ui-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Let clicks pass through to canvas if needed */
+    color: white;
+}
+
+.health-bar-container {
+    position: absolute;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    width: 250px;
+}
+
+#player-health-ui {
+    bottom: 20px;
+    left: 20px;
+}
+
+#monster-health-ui {
+    top: 20px;
+    right: 20px;
+}
+
+.health-bar-label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 2px black;
+}
+
+.health-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #555;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #777;
+}
+
+.health-bar-fill {
+    height: 100%;
+    width: 100%;
+    transition: width 0.3s ease-in-out;
+}
+
+.health-bar-fill.green { background-color: #4caf50; }
+.health-bar-fill.red { background-color: #f44336; }
+
+#controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+    pointer-events: all;
+}
+
+.control-btn {
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    background-color: #e74c3c;
+    color: white;
+    transition: all 0.2s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.control-btn:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+}
+
+#attack2-btn {
+    background-color: #3498db;
+}
+
+#attack2-btn:hover {
+    background-color: #2980b9;
+}
+
+#game-over-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    pointer-events: all;
+}
+
+#game-over-screen h2 {
+    font-size: 48px;
+    color: #e74c3c;
+    text-shadow: 2px 2px 5px black;
+}
+
+#game-over-screen button {
+    padding: 15px 30px;
+    font-size: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.hidden {
+    display: none !important;
+}
