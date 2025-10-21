@@ -1,1 +1,48 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ساحة قتال الوحوش - عالم ستايل</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Canvas for Three.js Scene -->
+    <canvas id="game-canvas"></canvas>
 
+    <!-- Game UI -->
+    <div id="ui-container">
+        <!-- Player Info -->
+        <div class="health-bar-container" id="player-health-ui">
+            <div class="health-bar-label">صحتك</div>
+            <div class="health-bar">
+                <div class="health-bar-fill green" id="player-health-fill"></div>
+            </div>
+        </div>
+
+        <!-- Monster Info -->
+        <div class="health-bar-container" id="monster-health-ui">
+            <div class="health-bar-label">صحة الوحش</div>
+            <div class="health-bar">
+                <div class="health-bar-fill red" id="monster-health-fill"></div>
+            </div>
+        </div>
+
+        <!-- Attack Controls -->
+        <div id="controls">
+            <button id="attack1-btn" class="control-btn">🔥 كرة نارية</button>
+            <button id="attack2-btn" class="control-btn">✨ علاج</button>
+        </div>
+    </div>
+
+    <!-- Game Over / Victory Screen -->
+    <div id="game-over-screen" class="hidden">
+        <h2 id="end-message"></h2>
+        <button id="restart-btn">العب مرة أخرى</button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
